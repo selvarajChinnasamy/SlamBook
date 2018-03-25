@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ServiceService {
   isUserLoggedIn;
   signup=false;
-  baseUrl='http://ec2-54-201-209-210.us-west-2.compute.amazonaws.com:8081/';
+  baseUrl='http://18.188.159.14:8081/';
   constructor(private http:Http,private router: Router, private route: ActivatedRoute,) {
     this.isUserLoggedIn = false;
    }

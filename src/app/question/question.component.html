@@ -2,7 +2,7 @@
   <div *ngIf="!noData">
     <div class="alert alert-success">
       <p>Add your questions here!</p>
-      <button style="float:right" type="button" routerLink="../profile" mat-raised-button color="primary">Dashboard</button>
+      <button style="float:right" type="button" routerLink="../profile" mat-raised-button color="primary">after adding questions Click here!</button>
     </div>
     <br/>
     <form [formGroup]="SForm" (ngSubmit)="customquestion(SForm.value)">
@@ -18,9 +18,9 @@
     <br/>
     <div *ngFor="let question of questions;let i=index;">
       <p>{{question.questions}}&nbsp;&nbsp;
-        <span (click)="addQuestions(i)" class="added glyphicon glyphicon-plus"></span>
-      </p>
-      <hr/>
+          <button style="float:right;z-index:999" (click)="addQuestions(i)" mat-raised-button color="primary">Add</button>      </p>
+      <br/>
+          <hr/>
     </div>
   </div>
   <div *ngIf="noData">

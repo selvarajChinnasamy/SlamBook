@@ -5,7 +5,7 @@
     </button>
     <mat-menu #menu="matMenu">
       <button (click)="logout()" mat-menu-item>Logout</button>
-      <button routerLink="../custom" mat-menu-item>Add questions</button>
+      <button routerLink="../questions" mat-menu-item>Add questions</button>
     </mat-menu>
     <strong>Your URL!</strong>
     <div class="input-group">
@@ -28,7 +28,7 @@
   </div>
   <div *ngIf="noData">
       <div class="alert alert-danger">
-          <p><strong> No Data Found!</strong> (Add Questions in you account and share the above URL to your Friends).</p>
+          <p><strong> No Answers yet!</strong> (Add Questions in you account and share the above URL to your Friends).</p>
         </div>
   </div>
 </div>

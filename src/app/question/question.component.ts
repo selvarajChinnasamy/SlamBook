@@ -16,9 +16,9 @@ export class QuestionComponent implements OnInit {
   questions:Array<any>=[];
   constructor(private router: Router,private service: ServiceService,private fb: FormBuilder) { }
   ngOnInit() {
-    if(this.service.signup==false){
-      this.router.navigate(['../profile']);
-    }
+    // if(this.service.signup==false){
+    //   this.router.navigate(['../profile']);
+    // }
     this.userid=localStorage.getItem('userid');
     this.service.getQuestions().subscribe(res=>{
       this.questions = res;

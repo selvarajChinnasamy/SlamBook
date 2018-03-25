@@ -4,9 +4,9 @@
         {{userName}} requested your memories!
       </div>
     <form [formGroup]="SForm" (ngSubmit)="Answer(SForm.value)" class="well form-horizontal">
-      <p>Who Yoy are?</p>
+      <p>Who are you?<span style="color:red">*</span></p>
         <input formControlName="who" placeholder="Name" class="form-control" type="text">
-        <p>How you Related to me?</p>
+        <p>How you related to me?</p>
         <select formControlName="relatedby" placeholder="Relacted By" class="form-control">
             <option value="friend">Friend</option>
             <option value="relative">Relactive</option>
@@ -26,8 +26,8 @@
         <div *ngIf="success" class="alert alert-success">
           <strong>Thank you!</strong><span style="cursor:pointer" routerLink="../../signup">&nbsp;&nbsp;Click hear to create your own slam</span>.
         </div>
-        <button *ngIf="!SForm.invalid" type="submit" class="btn btn-primary">Submit Answers</button><br/>
-        <p routerLink="../../signup" class="link">New User? Signup</p>
+        <button *ngIf="!SForm.invalid" type="submit" class="btn btn-primary">Submit Answers</button>
+        <button routerLink="../../signup" type="submit" class="btn btn-primary">New User? Signup</button>
       </div>
     </form>
   </div>
