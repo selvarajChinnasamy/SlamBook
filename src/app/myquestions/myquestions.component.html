@@ -1,0 +1,19 @@
+<div class="container">
+  <div *ngIf="!noData">
+    <div class="alert alert-success">
+      <p>your questions here!</p>
+      <button style="float:right" type="button" routerLink="../profile" mat-raised-button color="primary">Dashboard</button>
+    </div>
+    <br/>
+    <div *ngFor="let question of questions;let i=index;">
+      <p>{{question.questions}}&nbsp;&nbsp;
+          <button style="float:right;z-index:999" (click)="DeletQuestions(i)" mat-raised-button color="accent">Delet</button>      </p>
+      <br/>
+          <hr/>
+    </div>
+  </div>
+  <div *ngIf="noData">
+    No Questions Found!
+  </div>
+</div>
+<ngx-loading [show]="loading"></ngx-loading>

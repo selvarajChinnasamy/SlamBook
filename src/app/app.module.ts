@@ -16,6 +16,7 @@ import {MatSnackBarModule,MatCardModule,MatButtonModule,MatExpansionModule,MatMe
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AddcustomqusComponent } from './addcustomqus/addcustomqus.component';
 import { ClipboardModule } from 'ngx-clipboard';
+import { MyquestionsComponent } from './myquestions/myquestions.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { ClipboardModule } from 'ngx-clipboard';
     QuestionComponent,
     ViewsingleComponent,
     SlamComponent,
-    AddcustomqusComponent
+    AddcustomqusComponent,
+    MyquestionsComponent
   ],
   imports: [
     BrowserModule,

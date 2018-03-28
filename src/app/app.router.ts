@@ -7,6 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ViewsingleComponent } from './viewsingle/viewsingle.component';
 import { SlamComponent } from './slam/slam.component';
 import { AddcustomqusComponent } from './addcustomqus/addcustomqus.component';
+import { MyquestionsComponent } from './myquestions/myquestions.component';
 
 export const router: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -17,6 +18,7 @@ export const router: Routes = [
     { path:'custom', component: AddcustomqusComponent },
     { path:'viewsingle/:name', component: ViewsingleComponent},
     { path: 'slam/:userid', component: SlamComponent},
+    { path: 'myquestions', component: MyquestionsComponent},    
     { path: '**', component: ProfileComponent},
 ];
 

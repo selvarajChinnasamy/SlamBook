@@ -58,6 +58,7 @@ export class ServiceService {
      var data={
         userid:userid
       }
+      this.checkLoginFront(userid);
       return this.http.post(this.baseUrl+'getquestion',data).map(result => result.json());
     }
     addanswers(data){
@@ -77,5 +78,14 @@ export class ServiceService {
         userid:userid,
       }
       return this.http.post(this.baseUrl+'username',data).map(result => result.json());
+    }
+    deletQuestions(qid){
+      var userid=localStorage.getItem("userid");
+      this.checkLoginFront(userid);
+      var data={
+        userid:userid,
+        qid:qid
+      }
+      return this.http.post('http://localhost:8081/deletQuestions',data).map(result => result.json());
     }
 }
